@@ -82,7 +82,7 @@ extension Double
         let dd = log10(self < 0 ? -self : self)
         let d = ceil(dd)
         let pw = 1 - Int(d)
-        let magnitude = NSDecimalNumber(decimal: pow(10.0, pw))
+        let magnitude = NSDecimalNumber(decimal: pow(10, pw))
         let shifted = (self * Double(truncating: magnitude)).rounded()
         return shifted / Double(truncating: magnitude)
     }
