@@ -82,9 +82,9 @@ extension Double
         let dd = log10(self < 0 ? -self : self)
         let d = ceil(dd)
         let pw = 1 - Int(d)
-        let magnitude = pow(10.0, Double(pw))
-        let shifted = (self * magnitude).rounded()
-        return shifted / Double(magnitude)
+        let magnitude = NSDecimalNumber(decimal: pow(10.0, pw))
+        let shifted = (self * Double(truncating: magnitude)).rounded()
+        return shifted / Double(truncating: magnitude)
     }
 
     var decimalPlaces: Int
