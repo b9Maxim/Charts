@@ -19,7 +19,7 @@ let package = Package(
             targets: ["ChartKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-algorithms", .exactItem(.init(stringLiteral: "1.0.0")))
     ],
     targets: [
         .target(
