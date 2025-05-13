@@ -84,7 +84,7 @@ extension Double
         let pw = 1 - Int(d)
         let magnitude = pow(10.0, Double(pw))
         let shifted = (self * magnitude).rounded()
-        return shifted / magnitude
+        return shifted / Double(magnitude)
     }
 
     var decimalPlaces: Int
